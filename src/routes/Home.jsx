@@ -21,12 +21,11 @@ const Home = () => {
     return (
         <div>
             {loading ? (<h1>Loading...</h1>) : (
-                <div>
-                    <h1>DIG</h1>
-                    
+                <div>                    
                     {movies.map((movie, index) => (
                         <Movie
                             key={movie.id}
+                            id={movie.id}
                             coverImg={movie.medium_cover_image}
                             title={movie.title}
                             summaray={movie.summary}
